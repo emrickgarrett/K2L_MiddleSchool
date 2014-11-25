@@ -7,5 +7,5 @@
 //
 //will draw a  red rectangle on the screen.
 
-//The canvas is 800 wide, 500 tall.
+//Use WIDTH and HEIGHT to get how wide and tall the canvas is. Do not change these values.
 
