@@ -18,22 +18,22 @@
 
 //Up Key and 'W'
 function upPressed(){
-	alert("UP");
+
 }
 
 //Left Key and 'A'
 function leftPressed(){
-	alert("LEFT");
+
 }
 
 //Right Key and 'D'
 function rightPressed(){
-	alert("RIGHT");
+
 }
 
 //Down Key and 'S'
 function downPressed(){
-	alert("DOWN");
+
 }
 
 //Spacebar
