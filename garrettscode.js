@@ -64,7 +64,9 @@ function frame(){
 	
 	while(dt > step){
 		dt = dt - step;
-		update(step);
+		if(gameRunning){
+			update(step);
+		}
 	}
 	clearBuffer(dt);
 	draw(dt);
