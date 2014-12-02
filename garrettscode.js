@@ -75,3 +75,14 @@ function frame(){
 
 requestAnimationFrame(frame);
 
+
+//Drawing helper functions
+
+function drawMyImage(imgLoc, x, y){
+
+	var image = new Image();
+	image.src = imgLoc;
+	image.onload = function(){
+		c.drawImage(image, x, y);
+	};
+}
