@@ -2,6 +2,9 @@ var Canvas = document.getElementById("myCanvas");
 var	c = Canvas.getContext("2d");
 var WIDTH;
 var HEIGHT;
+var background = "#FFFFFF";
+
+var gameRunning = false;
 
 //Let them create their own code in their own file. I may come back and update this code later...
 function init(){
@@ -32,4 +35,43 @@ function init(){
 			leftPressed();
 		}
 	}
+	
+	gameRunning = true;
+	
 }
+	//Here is the gameloop. Calls your initialize() function first
+	//Then calls your draw method continuously and your update
+	//Method every 60 seconds...
+	var now,
+	dt = 0,
+	last = timestamp(),
+	step = 1/60;
+	
+function timestamp() {
+  return window.performance && window.performance.now ? window.performance.now() : new Date().getTime();
+}	
+
+function clearBuffer(){
+	var temp = c.fillStyle;
+	c.fillStyle = background;
+	c.fillRect(0,0,WIDTH,HEIGHT);
+	c.fillStyle = temp;
+}
+	
+function frame(){
+	now = timestamp();
+	dt = dt + Math.min(1, (now - last) / 1000);
+	
+	while(dt > step){
+		dt = dt - step;
+		update(step);
+	}
+	clearBuffer(dt);
+	draw(dt);
+	last = now;
+	requestAnimationFrame(frame);
+
+}
+
+requestAnimationFrame(frame);
+
