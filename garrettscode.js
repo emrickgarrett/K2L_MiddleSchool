@@ -16,6 +16,8 @@ function init(){
 	document.onkeydown = function (evt){
 		var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
 		
+		//alert(keyCode);
+		
 		if(keyCode == 13){
 			actionPressed();
 		}
@@ -33,6 +35,22 @@ function init(){
 		
 		if(keyCode == 65 || keyCode == 37){
 			leftPressed();
+		}
+		
+		if(keyCode == 73){
+			iPressed();
+		}
+		
+		if(keyCode == 74){
+			jPressed();
+		}
+		
+		if(keyCode == 75){
+			kPressed();
+		}
+		
+		if(keyCode == 76){
+			lPressed();
 		}
 	}
 	

@@ -1,24 +1,29 @@
-//Put your code below here.
-//Use 'c' to draw onto the canvas
-//EXAMPLE
-//
-//c.fillStyle ='#FF0000';
-//c.fillRect(0,0,150,75);
+//STEP 1.
 
-var myX = 0;
-var myY = 0;
+//STEP 2.
 
+//STEP 3.
 
-
+//STEP 4.
 
 //This code is for drawing and updating. Drawing is called asap while update happens on an interval
 function update(elapsedTime){
-	myX = myX+10*elapsedTime;
-	myY = myY+5*elapsedTime;
+	collisionDetection();
+	//Step 13
 }
 
 function draw(elapsedTime){
-	c.fillRect(myX,myY, 50,50);
+	//Step 5
+	
+	//Step 6
+	
+	//Step 10
+}
+
+function collisionDetection(){
+	//Step 16
+	
+	//Step 17
 }
 
 
@@ -47,6 +52,26 @@ function downPressed(){
 
 //Spacebar
 function actionPressed(){
+
+}
+
+//I Pressed
+function iPressed(){
+
+}
+
+//J Pressed
+function jPressed(){
+
+}
+
+//K Pressed
+function kPressed(){
+
+}
+
+//L Pressed
+function lPressed(){
 
 }
 
